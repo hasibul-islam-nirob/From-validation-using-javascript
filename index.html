@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registration</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/custom.css">
+</head>
+<body>
+    
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-btGreen noPrint">
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse " id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="register.html">Register</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="services.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="modal" data-target="#exampleModal" href="" onclick="event.preventDefault();" >Login</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+
+
+    <div class="main_section ">
+        <div class="container-fluid ">
+            <div class="row ">
+                
+                <div class="col-md-2"></div>
+
+                <div class="col-md-8 py-4">
+                    <div class="row">
+                        <div class="col-md-12 bg-hash text-center">
+                            <h3 class="py-1 " >Registration Form</h3>
+                        </div> 
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-12 py-5">
+                            <form action="" method="post" enctype="multipart/form-data" class="form-horizontal" id="form-sample-1" >
+    
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Name</label>
+                                    <div class="col-sm-9">
+                                        <input class="form-control" id="nameInput" name="fullName" onchange="nameInputValidation()" type="text" required>
+                                        <p id="nameDataMgs" class="d-none text-danger"></p>
+                                    </div>
+                                </div>
+                            
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">E-mail</label>
+                                    <div class="col-sm-9">
+                                        <input class="form-control" id="emailInput" onchange="emailInputValidation()" type="email" name="" required>
+                                        <p id="emailDataMgs" class="d-none text-danger"></p>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Username</label>
+                                    <div class="col-sm-9">
+                                        <input class="form-control" id="usernameInput" onchange="usernameInputValidation()" type="text" name="" required>
+                                        <p id="usernameDataMgs" class="d-none text-danger"></p>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Password</label>
+                                    <div class="col-sm-9">
+                                        <input class="form-control" id="passwordInput" onchange="checkPasswordValidation()" onblur="passwordInputValidation()" type="password" name="" required>
+                                        <p id="passwordDataMgs" class="d-none text-danger"></p>
+                                        <p id="passwordDataMgsTwo" class="d-none text-danger"></p>
+                                        <p id="congratulateMsg" class="text-success d-none">Congratulations, the password of your choice has fulfilled all the conditions</p>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Confirm Password</label>
+                                    <div class="col-sm-9">
+                                        <input class="form-control" id="conPasswordInput" onchange="confirmPasswordValidation()" onblur="passwordInputValidation()" type="password" name="" required>
+                                        <p id="conPasswordDataMgs" class="d-none text-danger"></p>
+                                        <p id="conPasswordDataMgsTwo" class="d-none text-danger"></p>
+                                    </div>
+                                </div>
+                            
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Contact Number</label>
+                                    <div class="col-sm-9">
+                                        <input class="form-control" id="contactInput" onchange="contactInputValidation()" onblur="contactLengthCheck()" type="text" name="" required >
+                                        <p id="contactDataMgs" class="d-none text-danger"></p>
+                                        <p id="contactDataMgsTwo" class="d-none text-danger"></p>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Address</label>
+                                    <div class="col-sm-9">
+                                        <textarea id="addressInput" onchange="addressInputValidation()" cols="85" rows="5" required></textarea>
+                                        <p id="addressDataMgs" class="d-none text-danger"></p>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Image</label>
+                                    <div class="col-sm-9">
+                                        <input class="form-control-file form-control" id="imageInput" onchange="fileValidation()" type="file" required name="product_image" accept="image/*"/>
+                                        <img id="imgPreview" class="d-none" src="#" alt="" height="250px" width="300px">
+                                        <p id="imgDataMgs" class="d-none text-danger">Use Only ' jpg, png, jpeg' formate</p>
+                                    </div>
+                                </div>
+                            
+                                <div class="form-group row">
+                                    <label class="col-sm-3 col-form-label">Gender</label>
+                                    <div class="col-sm-9">
+                                        <div>
+                                            <label class="ui-radio ui-radio-primary ui-radio-inline" >
+                                                <input type="radio" id="male" name="gender" value="Male" onclick="maleGenderValidation()">
+                                                <span class="input-span" ></span>Male</label>
+
+                                            <label class="ui-radio ui-radio-primary ui-radio-inline">
+                                                <input type="radio" id="female" name="gender" value="Female" onclick="femaleGenderValidation()">
+                                                <span class="input-span"></span>Female</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-9 ml-sm-auto">
+                                        <button class="btn btn-block btn-info noPrint" onclick="event.preventDefault(); onSubmitConfirmBtn()" id="RegBtn" type="submit"> Registration Now </button>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-9 ml-sm-auto">
+                                        <button class="btn btn-block btn-danger noPrint" onclick="PrintFromData(event)" id="RegBtn">Print Now </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+    <div class="header_section bg-btGreen text-white h-50 my-1 noPrint">
+        <div class="container-fluid ">
+            <div class="row">
+                <div class="col-md-12 py-2 text-center">
+                    <p>&copy;  All Reserved 2022</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/custom.js"></script>
+</body>
+</html>

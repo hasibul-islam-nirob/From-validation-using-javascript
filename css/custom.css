@@ -1,0 +1,89 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+.h-50{height: 50px;}
+.h-100{height: 100px;}
+.h-150{height: 150px;}
+.h-200{height: 200px;}
+.h-400{height: 400px;}
+.h-500{height: 500px;}
+.h-600{height: 600px;}
+
+.brandName{
+    width: 350px;
+}
+.brandLogo{
+    width: 50px;
+}
+
+.bg-btGreen {
+    background-color: #115f3d !important;
+}
+
+.images{
+    width: 225px;
+    height: 200px;
+    border: 1px solid rgb(148, 146, 146);
+    padding: 10px;
+}
+.imageClass{
+    width: 100%;
+}
+
+.sidebar_left{
+    font-size: 18px;
+    padding: 10px;
+    background-color: #ddd !important;
+    margin-top: 10px
+
+}
+.bg-hash{ background-color: #9ca3a0; }
+
+.aboutImage {
+    margin-left: 350px;
+    border-radius: 50%;
+}
+
+/*       Services Page     */
+
+/*       Services Page     */
+.cardd {
+    border: 1px solid !important;
+    text-align: center !important;
+    padding: 10px !important;
+    margin: 15px 10px !important;
+    height: 300px !important;
+}
+.card-body{
+
+}
+
+.card-body img{
+
+}
+.card-body h3{
+
+}
+.card-body p{
+
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 750px) {
+    .images{
+        width: 450px;
+        height: 200px;
+        margin-left: 20px;
+    }
+    .aboutImage {
+        margin-left: 50px;
+    }
+    
+  }
+
+@media print {
+    .noPrint{
+        display:none;
+    }
+}
